@@ -1,0 +1,114 @@
+{
+  "title": "Web Design & Development",
+  "description": "Building sleek, high-performing websites that do more than just sit there looking pretty. At Extensibl Media, we make sure your online presence packs a punch.",
+  "image": "web-design-development.jpg",
+  "imageAlt": "Sleek website design displayed on multiple devices",
+  "sections": [
+    {
+      "name": "Hero",
+      "content": {
+        "heading": "Crafting Websites That Work as Hard as You Do",
+        "subheading": "We build sites that don’t just look good—they get results. Ready to take your online presence to the next level?",
+        "CTA": "Get Started Today",
+        "CTALink": "/contact",
+        "image": "hero-web-design.jpg",
+        "imageAlt": "Team of designers working on a project"
+      }
+    },
+    {
+      "name": "FeaturesGrid",
+      "heading": "Why Extensibl Media? Because We Get It.",
+      "content": {
+        "features": [
+          {
+            "heading": "Custom Design That Pops",
+            "description": "Tired of cookie-cutter websites? We craft one-of-a-kind designs that reflect your brand's unique vibe. No templates, no shortcuts.",
+            "icon": "custom-design-icon.png"
+          },
+          {
+            "heading": "Responsive & Mobile-First, Always",
+            "description": "In a world where everyone’s glued to their phones, we make sure your site looks and works great on any screen. Thumbs up!",
+            "icon": "responsive-design-icon.png"
+          },
+          {
+            "heading": "SEO Magic Built Right In",
+            "description": "A gorgeous site is useless if no one sees it. We bake in SEO from the start, so you don’t just look good—you get found.",
+            "icon": "seo-optimized-icon.png"
+          },
+          {
+            "heading": "We’ve Got Your Back",
+            "description": "From brainstorming to go-live and beyond, we stick around to keep your site fresh, fast, and in tip-top shape.",
+            "icon": "full-service-support-icon.png"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SideBySide",
+      "mediaSide": "RIGHT",
+      "content": {
+        "image": "web-design-process.jpg",
+        "imageAlt": "Collaborative web design process",
+        "heading": "Our Web Design Process: All Thrills, No Frills",
+        "subheading": "From Idea to Launch, We’ve Got This",
+        "body": "Let’s be real—a website isn’t just an online brochure. It’s your digital handshake, your 24/7 storefront. We make sure it’s a firm one. Our process is streamlined, efficient, and gets you from zero to live with zero headaches.",
+        "CTA": "See How We Work",
+        "CTALink": "/web-design-process"
+      }
+    },
+    {
+      "name": "SideBySide",
+      "mediaSide": "LEFT",
+      "content": {
+        "image": "seo-integration.jpg",
+        "imageAlt": "SEO-friendly web design",
+        "heading": "SEO That Doesn’t Suck",
+        "subheading": "Because What’s a Website Without Traffic?",
+        "body": "If your website isn’t pulling in visitors, what’s the point? We integrate SEO from day one, so your site gets noticed by the right people—aka your future customers.",
+        "CTA": "Check Out Our SEO Game",
+        "CTALink": "/seo-services"
+      }
+    },
+    {
+      "name": "SideBySide",
+      "mediaSide": "RIGHT",
+      "content": {
+        "image": "client-support.jpg",
+        "imageAlt": "Ongoing website support",
+        "heading": "Support That Doesn’t Disappear",
+        "subheading": "We’re Not Going Anywhere",
+        "body": "Websites need love to keep them running smoothly. We’re here to handle the updates, fixes, and tweaks so you can focus on what you do best—running your business.",
+        "CTA": "See Our Support Plans",
+        "CTALink": "/support-packages"
+      }
+    },
+    {
+      "name": "FeaturesGrid",
+      "heading": "Pain Points We Eliminate (AKA The Stuff That Sucks)",
+      "content": {
+        "features": [
+          {
+            "heading": "Outdated, Clunky Designs",
+            "description": "If your website looks like it hasn’t been touched since 2010, it’s time for a refresh. We’ll make it sleek, modern, and a true reflection of your brand.",
+            "icon": "outdated-design-icon.png"
+          },
+          {
+            "heading": "Terrible Mobile Experience",
+            "description": "Nothing says ‘bounce’ like a site that doesn’t work on mobile. We make sure your site is mobile-optimized, so you don’t miss out on any thumb-tapping customers.",
+            "icon": "mobile-experience-icon.png"
+          },
+          {
+            "heading": "Slow as Molasses",
+            "description": "A slow website is a no-go. We optimize your site to load fast, keeping visitors happy and search engines smiling.",
+            "icon": "slow-loading-icon.png"
+          },
+          {
+            "heading": "Invisible on Google",
+            "description": "A pretty site doesn’t mean much if no one can find it. We tackle SEO so your site shows up where it should—at the top.",
+            "icon": "lack-of-seo-icon.png"
+          }
+        ]
+      }
+    }
+  ]
+}

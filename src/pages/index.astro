@@ -1,0 +1,559 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import heroImg from "../assets/tech-hero.jpg";
+import mockup from "../assets/mockup.jpg";
+import grid from "../assets/grid.svg";
+import TestimonialsPreview from "../components/TestimonialsPreview.astro";
+// import FAQs from "../components/FAQs.astro";
+---
+
+<BaseLayout>
+  <!-- Hero Section -->
+  <section class="container mx-auto -mt-8 lg:-mt-20">
+    <div class="grid grid-cols-3 gap-4">
+      <div
+        class="col-span-3 lg:col-span-2 p-4 lg:p-12 bg-neutral-900 rounded-lg space-y-4 relative"
+      >
+        <Image
+          class="absolute top-0 left-0 bottom-0 right-0 h-full w-full opacity-10 object-cover pointer-events-none"
+          alt=""
+          src={grid}
+        />
+        <h1 class="text-4xl md:text-5xl xl:text-6xl text-neutral-200">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        </h1>
+        <p class="text-neutral-500">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit
+        </p>
+        <a href="/contact-us" class="flex gap-4 items-center group !mt-8 w-fit">
+          <div
+            class="bg-black h-10 w-10 rounded-full flex items-center justify-center rotate-45 group-hover:rotate-0 transition-all duration-300"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="text-neutral-200 group-hover:text-turquoise-200"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.625 4.375L22.75 4.375C22.9821 4.375 23.2046 4.46719 23.3687 4.63128C23.5328 4.79538 23.625 5.01794 23.625 5.25V18.375C23.625 18.8582 23.2332 19.25 22.75 19.25C22.2668 19.25 21.875 18.8582 21.875 18.375V7.36244L5.86872 23.3687C5.52701 23.7104 4.97299 23.7104 4.63128 23.3687C4.28957 23.027 4.28957 22.473 4.63128 22.1313L20.6376 6.125L9.625 6.125C9.14175 6.125 8.75 5.73325 8.75 5.25C8.75 4.76675 9.14175 4.375 9.625 4.375Z"
+                fill="currentColor"></path>
+            </svg>
+          </div>
+          <p class="text-2xl text-neutral-300 group-hover:text-neutral-200">
+            Start A Project
+          </p>
+        </a>
+      </div>
+      <div
+        class="col-span-3 lg:col-span-1 bg-neutral-900 rounded-lg overflow-hidden relative"
+      >
+        <Image
+          class="w-full"
+          src={heroImg}
+          alt="abstract image of an eye and extending elements"
+        />
+        <div class="absolute p-4 bg-neutral-900 bottom-0 left-0 right-0">
+          <p class="text-xl text-neutral-200">Some Heading Text</p>
+          <p class="text-neutral-400">Some supporting Text uderneath</p>
+        </div>
+      </div>
+      <!-- <div
+        class="col-span-3 border-2 border-neutral-900 rounded-lg p-2 grid grid-cols-6 gap-3"
+      >
+        <div
+          class="p-4 bg-neutral-900 rounded-md col-span-3 sm:col-span-2 lg:col-span-1 flex items-center gap-2 flex-col"
+        >
+          <p class="text-neutral-400">Lorem Ipsum</p>
+          <p class="text-2xl md:text-4xl text-turquoise-600">100+</p>
+        </div>
+        <div
+          class="p-4 bg-neutral-900 rounded-md col-span-3 sm:col-span-2 lg:col-span-1 flex items-center gap-2 flex-col"
+        >
+          <p class="text-neutral-400">Lorem Ipsum</p>
+          <p class="text-2xl md:text-4xl text-turquoise-600">100+</p>
+        </div>
+        <div
+          class="p-4 bg-neutral-900 rounded-md col-span-3 sm:col-span-2 lg:col-span-1 flex items-center gap-2 flex-col"
+        >
+          <p class="text-neutral-400">Lorem Ipsum</p>
+          <p class="text-2xl md:text-4xl text-turquoise-600">100+</p>
+        </div>
+        <div
+          class="p-4 bg-neutral-900 rounded-md col-span-3 sm:col-span-2 lg:col-span-1 flex items-center gap-2 flex-col"
+        >
+          <p class="text-neutral-400">Lorem Ipsum</p>
+          <p class="text-2xl md:text-4xl text-turquoise-600">100+</p>
+        </div>
+        <div
+          class="p-4 bg-neutral-900 rounded-md col-span-6 sm:col-span-2 lg:col-span-1 flex items-center gap-2 flex-col"
+        >
+          <p class="text-neutral-400">Lorem Ipsum</p>
+          <p class="text-2xl md:text-4xl text-turquoise-600">100+</p>
+        </div>
+        <div
+          class="p-4 bg-neutral-900 rounded-md col-span-6 sm:col-span-2 lg:col-span-1 flex items-center gap-2 flex-col"
+        >
+          <p class="text-neutral-400">Lorem Ipsum</p>
+          <p class="text-2xl md:text-4xl text-turquoise-600">100+</p>
+        </div>
+      </div> -->
+    </div>
+  </section>
+  <!-- Services -->
+  <section id="services" class="container mx-auto">
+    <div class="space-y-4">
+      <div class="bg-neutral-900 p-4 md:p-8 rounded-lg">
+        <h2 class="text-3xl md:text-4xl text-neutral-200">Our Services</h2>
+      </div>
+      <div
+        class="grid grid-cols-4 gap-3 border-2 border-neutral-900 rounded-lg p-2"
+      >
+        <div
+          class="col-span-4 lg:col-span-2 bg-neutral-900 rounded-md p-8 lg:p-12 group space-y-4 cursor-pointer"
+        >
+          <div class="flex justify-between items-center">
+            <div class="flex items-center gap-4">
+              <h3 class="text-neutral-200 text-xl md:text-3xl">Web Design</h3>
+            </div>
+            <!-- <a href="/services/web-design" class="flex gap-3 items-center">
+              <div
+                class="bg-black h-10 w-10 rounded-full flex items-center justify-center rotate-45 group-hover:rotate-0 transition-all duration-300"
+              >
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-neutral-200 group-hover:text-turquoise-200"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.625 4.375L22.75 4.375C22.9821 4.375 23.2046 4.46719 23.3687 4.63128C23.5328 4.79538 23.625 5.01794 23.625 5.25V18.375C23.625 18.8582 23.2332 19.25 22.75 19.25C22.2668 19.25 21.875 18.8582 21.875 18.375V7.36244L5.86872 23.3687C5.52701 23.7104 4.97299 23.7104 4.63128 23.3687C4.28957 23.027 4.28957 22.473 4.63128 22.1313L20.6376 6.125L9.625 6.125C9.14175 6.125 8.75 5.73325 8.75 5.25C8.75 4.76675 9.14175 4.375 9.625 4.375Z"
+                    fill="currentColor"></path>
+                </svg>
+              </div>
+              <span class="text-neutral-200 group-hover:text-turquoise-200"
+                >Book A Call</span
+              >
+            </a> -->
+          </div>
+          <p class="text-neutral-400 text-sm md:text-base">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div
+          class="col-span-4 lg:col-span-2 bg-neutral-900 rounded-md p-8 lg:p-12 group space-y-4 cursor-pointer"
+        >
+          <div class="flex justify-between items-center">
+            <div class="flex items-center gap-4">
+              <h3 class="text-neutral-200 text-xl md:text-3xl">
+                App Development
+              </h3>
+            </div>
+            <!-- <a href="/services/app-development" class="flex gap-3 items-center">
+              <div
+                class="bg-black h-10 w-10 rounded-full flex items-center justify-center rotate-45 group-hover:rotate-0 transition-all duration-300"
+              >
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-neutral-200 group-hover:text-turquoise-200"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.625 4.375L22.75 4.375C22.9821 4.375 23.2046 4.46719 23.3687 4.63128C23.5328 4.79538 23.625 5.01794 23.625 5.25V18.375C23.625 18.8582 23.2332 19.25 22.75 19.25C22.2668 19.25 21.875 18.8582 21.875 18.375V7.36244L5.86872 23.3687C5.52701 23.7104 4.97299 23.7104 4.63128 23.3687C4.28957 23.027 4.28957 22.473 4.63128 22.1313L20.6376 6.125L9.625 6.125C9.14175 6.125 8.75 5.73325 8.75 5.25C8.75 4.76675 9.14175 4.375 9.625 4.375Z"
+                    fill="currentColor"></path>
+                </svg>
+              </div>
+              <span class="text-neutral-200 group-hover:text-turquoise-200"
+                >Book A Call</span
+              >
+            </a> -->
+          </div>
+          <p class="text-neutral-400 text-sm md:text-base">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div
+          class="col-span-4 lg:col-span-2 bg-neutral-900 rounded-md p-8 lg:p-12 group space-y-4 cursor-pointer"
+        >
+          <div class="flex justify-between items-center">
+            <div class="flex items-center gap-4">
+              <h3 class="text-neutral-200 text-xl md:text-3xl">UI/UX Design</h3>
+            </div>
+            <!-- <a href="/services/ui-ux-design" class="flex gap-3 items-center">
+              <div
+                class="bg-black h-10 w-10 rounded-full flex items-center justify-center rotate-45 group-hover:rotate-0 transition-all duration-300"
+              >
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-neutral-200 group-hover:text-turquoise-200"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.625 4.375L22.75 4.375C22.9821 4.375 23.2046 4.46719 23.3687 4.63128C23.5328 4.79538 23.625 5.01794 23.625 5.25V18.375C23.625 18.8582 23.2332 19.25 22.75 19.25C22.2668 19.25 21.875 18.8582 21.875 18.375V7.36244L5.86872 23.3687C5.52701 23.7104 4.97299 23.7104 4.63128 23.3687C4.28957 23.027 4.28957 22.473 4.63128 22.1313L20.6376 6.125L9.625 6.125C9.14175 6.125 8.75 5.73325 8.75 5.25C8.75 4.76675 9.14175 4.375 9.625 4.375Z"
+                    fill="currentColor"></path>
+                </svg>
+              </div>
+              <span class="text-neutral-200 group-hover:text-turquoise-200"
+                >Learn More</span
+              >
+            </a> -->
+          </div>
+          <p class="text-neutral-400 text-sm md:text-base">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div
+          class="col-span-4 lg:col-span-2 bg-neutral-900 rounded-md p-8 lg:p-12 group space-y-4 cursor-pointer"
+        >
+          <div class="flex justify-between items-center">
+            <div class="flex items-center gap-4">
+              <h3 class="text-neutral-200 text-xl md:text-3xl">
+                Digital Marketing
+              </h3>
+            </div>
+            <!-- <a
+              href="/services/digital-marketing"
+              class="flex gap-3 items-center"
+            >
+              <div
+                class="bg-black h-10 w-10 rounded-full flex items-center justify-center rotate-45 group-hover:rotate-0 transition-all duration-300"
+              >
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-neutral-200 group-hover:text-turquoise-200"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.625 4.375L22.75 4.375C22.9821 4.375 23.2046 4.46719 23.3687 4.63128C23.5328 4.79538 23.625 5.01794 23.625 5.25V18.375C23.625 18.8582 23.2332 19.25 22.75 19.25C22.2668 19.25 21.875 18.8582 21.875 18.375V7.36244L5.86872 23.3687C5.52701 23.7104 4.97299 23.7104 4.63128 23.3687C4.28957 23.027 4.28957 22.473 4.63128 22.1313L20.6376 6.125L9.625 6.125C9.14175 6.125 8.75 5.73325 8.75 5.25C8.75 4.76675 9.14175 4.375 9.625 4.375Z"
+                    fill="currentColor"></path>
+                </svg>
+              </div>
+              <span class="text-neutral-200 group-hover:text-turquoise-200"
+                >Book A Call</span
+              >
+            </a> -->
+          </div>
+          <p class="text-neutral-400 text-sm md:text-base">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div
+          class="col-span-4 lg:col-span-2 bg-neutral-900 rounded-md p-8 lg:p-12 group space-y-4 cursor-pointer"
+        >
+          <div class="flex justify-between items-center">
+            <div class="flex items-center gap-4">
+              <h3 class="text-neutral-200 text-xl md:text-3xl">SEO Services</h3>
+            </div>
+            <!-- <a href="/services/seo" class="flex gap-3 items-center">
+              <div
+                class="bg-black h-10 w-10 rounded-full flex items-center justify-center rotate-45 group-hover:rotate-0 transition-all duration-300"
+              >
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-neutral-200 group-hover:text-turquoise-200"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.625 4.375L22.75 4.375C22.9821 4.375 23.2046 4.46719 23.3687 4.63128C23.5328 4.79538 23.625 5.01794 23.625 5.25V18.375C23.625 18.8582 23.2332 19.25 22.75 19.25C22.2668 19.25 21.875 18.8582 21.875 18.375V7.36244L5.86872 23.3687C5.52701 23.7104 4.97299 23.7104 4.63128 23.3687C4.28957 23.027 4.28957 22.473 4.63128 22.1313L20.6376 6.125L9.625 6.125C9.14175 6.125 8.75 5.73325 8.75 5.25C8.75 4.76675 9.14175 4.375 9.625 4.375Z"
+                    fill="currentColor"></path>
+                </svg>
+              </div>
+              <span class="text-neutral-200 group-hover:text-turquoise-200"
+                >Book A Call</span
+              >
+            </a> -->
+          </div>
+          <p class="text-neutral-400 text-sm md:text-base">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div
+          class="col-span-4 lg:col-span-2 bg-neutral-900 rounded-md p-8 lg:p-12 group space-y-4 cursor-pointer"
+        >
+          <div class="flex justify-between items-center">
+            <div class="flex items-center gap-4">
+              <h3 class="text-neutral-200 text-xl md:text-3xl">Brand Design</h3>
+            </div>
+            <!-- <a
+              href="/services/digital-marketing"
+              class="flex gap-3 items-center"
+            >
+              <div
+                class="bg-black h-10 w-10 rounded-full flex items-center justify-center rotate-45 group-hover:rotate-0 transition-all duration-300"
+              >
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-neutral-200 group-hover:text-turquoise-200"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.625 4.375L22.75 4.375C22.9821 4.375 23.2046 4.46719 23.3687 4.63128C23.5328 4.79538 23.625 5.01794 23.625 5.25V18.375C23.625 18.8582 23.2332 19.25 22.75 19.25C22.2668 19.25 21.875 18.8582 21.875 18.375V7.36244L5.86872 23.3687C5.52701 23.7104 4.97299 23.7104 4.63128 23.3687C4.28957 23.027 4.28957 22.473 4.63128 22.1313L20.6376 6.125L9.625 6.125C9.14175 6.125 8.75 5.73325 8.75 5.25C8.75 4.76675 9.14175 4.375 9.625 4.375Z"
+                    fill="currentColor"></path>
+                </svg>
+              </div>
+              <span class="text-neutral-200 group-hover:text-turquoise-200"
+                >Book A Call</span
+              >
+            </a> -->
+          </div>
+          <p class="text-neutral-400 text-sm md:text-base">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Why Choose Us -->
+  <section id="why-choose-extensibl" class="container mx-auto">
+    <div class="space-y-4">
+      <div class="bg-neutral-900 p-4 md:p-8 rounded-lg">
+        <h2 class="text-3xl md:text-4xl text-neutral-200">
+          Reasons To Choose Extensibl For Your Next Project
+        </h2>
+      </div>
+      <div
+        class="grid grid-cols-4 gap-3 border-2 border-neutral-900 rounded-lg p-2"
+      >
+        <div
+          class="col-span-4 md:col-span-2 lg:col-span-1 bg-neutral-900 rounded-md p-8 group space-y-4"
+        >
+          <h3 class="text-neutral-200 text-xl md:text-2xl">Heading 3</h3>
+          <p class="text-neutral-500 text-sm md:text-base">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div
+          class="col-span-4 md:col-span-2 lg:col-span-1 bg-neutral-900 rounded-md p-8 group space-y-4"
+        >
+          <h3 class="text-neutral-200 text-xl md:text-2xl">Heading 3</h3>
+          <p class="text-neutral-500 text-sm md:text-base">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div
+          class="col-span-4 md:col-span-2 lg:col-span-1 bg-neutral-900 rounded-md p-8 group space-y-4"
+        >
+          <h3 class="text-neutral-200 text-xl md:text-2xl">Heading 3</h3>
+          <p class="text-neutral-500 text-sm md:text-base">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div
+          class="col-span-4 md:col-span-2 lg:col-span-1 bg-neutral-900 rounded-md p-8 group space-y-4"
+        >
+          <h3 class="text-neutral-200 text-xl md:text-2xl">Heading 3</h3>
+          <p class="text-neutral-500 text-sm md:text-base">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Portfolio -->
+  <section id="portfolio" class="container mx-auto">
+    <div class="space-y-4">
+      <div class="bg-neutral-900 p-4 md:p-8 rounded-lg">
+        <h2 class="text-3xl md:text-4xl text-neutral-200">Our Work</h2>
+      </div>
+      <div class="border-2 border-neutral-900 rounded-lg p-2">
+        <div class="grid grid-cols-3 gap-3">
+          <div
+            class="col-span-3 md:col-span-1 p-8 bg-neutral-900 rounded-md space-y-4"
+          >
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-3">
+                <p class="text-xl text-neutral-200">
+                  Project Title That is Looooooong
+                </p>
+              </div>
+              <div class="flex items-center gap-2 group">
+                <div
+                  class="bg-black h-8 w-8 rounded-full flex items-center justify-center rotate-45 group-hover:rotate-0 transition-all duration-300"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="text-neutral-200 group-hover:text-turquoise-200"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9.625 4.375L22.75 4.375C22.9821 4.375 23.2046 4.46719 23.3687 4.63128C23.5328 4.79538 23.625 5.01794 23.625 5.25V18.375C23.625 18.8582 23.2332 19.25 22.75 19.25C22.2668 19.25 21.875 18.8582 21.875 18.375V7.36244L5.86872 23.3687C5.52701 23.7104 4.97299 23.7104 4.63128 23.3687C4.28957 23.027 4.28957 22.473 4.63128 22.1313L20.6376 6.125L9.625 6.125C9.14175 6.125 8.75 5.73325 8.75 5.25C8.75 4.76675 9.14175 4.375 9.625 4.375Z"
+                      fill="currentColor"></path>
+                  </svg>
+                </div>
+                <p class="text-neutral-300 text-nowrap">Details</p>
+              </div>
+            </div>
+            <p class="text-neutral-400 text-sm md:text-base">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <div
+              class="bg-neutral-800 px-2 py-1 w-fit flex items-center gap-2 rounded-md shadow-lg text-sm md:text-base"
+            >
+              <span class="text-neutral-400">Category</span>
+              <div class="h-1 w-1 rounded full bg-turquoise-500"></div>
+              <span class="text-neutral-200">App Development</span>
+            </div>
+          </div>
+          <div
+            class="col-span-3 md:col-span-1 bg-neutral-900 rounded-md overflow-hidden"
+          >
+            <Image
+              src={mockup}
+              alt="project image"
+              class="object-cover h-full"
+            />
+          </div>
+          <div class="col-span-3 md:col-span-1 flex flex-col gap-4">
+            <div class="p-8 bg-neutral-900 rounded-md grow space-y-4">
+              <p class="text-neutral-200">Technologies Used:</p>
+              <div class="flex items-center gap-2 flex-wrap">
+                <div
+                  class="rounded-md px-2 py-1 bg-neutral-800 text-neutral-400"
+                >
+                  React
+                </div>
+                <div
+                  class="rounded-md px-2 py-1 bg-neutral-800 text-neutral-400"
+                >
+                  Laravel
+                </div>
+                <div
+                  class="rounded-md px-2 py-1 bg-neutral-800 text-neutral-400"
+                >
+                  PostgreSQL
+                </div>
+                <div
+                  class="rounded-md px-2 py-1 bg-neutral-800 text-neutral-400"
+                >
+                  Redis
+                </div>
+                <div
+                  class="rounded-md px-2 py-1 bg-neutral-800 text-neutral-400"
+                >
+                  TailwindCSS
+                </div>
+              </div>
+            </div>
+            <a
+              href="/contact-us"
+              class="bg-turquoise-500 text-black px-4 py-3 rounded-md flex items-center justify-center text-lg md:text-xl"
+              >Book A Call</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonials -->
+  <TestimonialsPreview />
+
+  <!-- About Me -->
+  <section id="about-me" class="container mx-auto">
+    <div class="space-y-4">
+      <div class="bg-neutral-900 p-4 md:p-8 rounded-lg">
+        <h2 class="text-3xl md:text-4xl text-neutral-200">About Me</h2>
+      </div>
+      <div class="grid grid-cols-3 gap-4">
+        <div
+          class="col-span-3 lg:col-span-2 p-4 lg:p-12 bg-neutral-900 rounded-lg space-y-4 relative"
+        >
+          <p class="text-neutral-200">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit
+          </p>
+          <!-- <a href="/contact-us" class="flex gap-4 items-center group !mt-8 w-fit">
+          <div
+            class="bg-black h-10 w-10 rounded-full flex items-center justify-center rotate-45 group-hover:rotate-0 transition-all duration-300"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="text-neutral-200 group-hover:text-turquoise-200"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.625 4.375L22.75 4.375C22.9821 4.375 23.2046 4.46719 23.3687 4.63128C23.5328 4.79538 23.625 5.01794 23.625 5.25V18.375C23.625 18.8582 23.2332 19.25 22.75 19.25C22.2668 19.25 21.875 18.8582 21.875 18.375V7.36244L5.86872 23.3687C5.52701 23.7104 4.97299 23.7104 4.63128 23.3687C4.28957 23.027 4.28957 22.473 4.63128 22.1313L20.6376 6.125L9.625 6.125C9.14175 6.125 8.75 5.73325 8.75 5.25C8.75 4.76675 9.14175 4.375 9.625 4.375Z"
+                fill="currentColor"></path>
+            </svg>
+          </div>
+          <p class="text-2xl text-neutral-300 group-hover:text-neutral-200">
+            Start A Project
+          </p>
+        </a> -->
+        </div>
+        <div
+          class="col-span-3 lg:col-span-1 bg-neutral-900 rounded-lg overflow-hidden relative"
+        >
+          <Image
+            class="w-full"
+            src={heroImg}
+            alt="abstract image of an eye and extending elements"
+          />
+          <!-- <div class="absolute p-4 bg-neutral-900 bottom-0 left-0 right-0">
+          <p class="text-xl text-neutral-200">Some Heading Text</p>
+          <p class="text-neutral-400">Some supporting Text uderneath</p>
+        </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FAQs -->
+  <!-- <FAQs /> -->
+</BaseLayout>
